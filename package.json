@@ -1,0 +1,26 @@
+{
+  "name": "orb",
+  "version": "1.0.0",
+  "description": "concept lang test refactor design smell scaffolding vcs",
+  "main": ".releaserc.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^10.0.4",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/release-notes-generator": "^11.0.7",
+    "dateformat": "^4.6.3",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "semantic-release-gitmoji": "^1.6.4",
+    "util": "^0.12.5"
+  }
+}
