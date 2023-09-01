@@ -21,7 +21,7 @@ THE SOFTWARE.
 */
 package main
 
-import "orb/cmd"
+import "github.com/hwansul/orb/cmd"
 
 func main() {
 	cmd.Execute()

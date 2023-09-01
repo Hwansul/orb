@@ -24,7 +24,7 @@ package cmd
 import (
 	"fmt"
 
-	"orb/lib/modules/table"
+	"github.com/hwansul/orb/lib/modules/table"
 
 	"github.com/spf13/cobra"
 )
