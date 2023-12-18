@@ -21,7 +21,13 @@ THE SOFTWARE.
 */
 package main
 
-import "github.com/hwansul/orb/cmd"
+import (
+	"github.com/jipilmuk/orb/cmd"
+	_ "github.com/jipilmuk/orb/cmd/component"
+	_ "github.com/jipilmuk/orb/cmd/component/react"
+	_ "github.com/jipilmuk/orb/cmd/fiddle"
+	_ "github.com/jipilmuk/orb/cmd/fiddle/patterns"
+)
 
 func main() {
 	cmd.Execute()

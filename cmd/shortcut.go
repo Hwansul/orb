@@ -24,7 +24,7 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/hwansul/orb/lib/modules/table"
+	"github.com/jipilmuk/orb/utills/table"
 
 	"github.com/spf13/cobra"
 )
@@ -44,15 +44,12 @@ This command has flags for text editors(or IDE) which you prefer.
 `,
 
 	Run: func(cmd *cobra.Command, args []string) {
-		isVscode, _ := cmd.Flags().GetBool("vscode")
-		isObsidian, _ := cmd.Flags().GetBool("obsidian")
-		if isVscode {
+
+		if vscodeOption, _ := cmd.Flags().GetBool("vscode"); vscodeOption {
 			table.Print(dataArr[0], table.Header, table.Footer)
-			return
 		}
-		if isObsidian {
+		if obsidianOption, _ := cmd.Flags().GetBool("obsidian"); obsidianOption {
 			table.Print(dataArr[1], table.Header, table.Footer)
-			return
 		}
 
 		fmt.Println("You can see a shortcut tables for obsidian or vscode. please run this command again with --vscode or --obsidian")
@@ -60,7 +57,7 @@ This command has flags for text editors(or IDE) which you prefer.
 }
 
 func init() {
-	rootCmd.AddCommand(shortcutCmd)
+	RootCmd.AddCommand(shortcutCmd)
 
 	// Here you will define your flags and configuration settings.
 

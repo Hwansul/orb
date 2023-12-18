@@ -3,8 +3,8 @@ const { promisify } = require('util')
 const dateFormat = require('dateformat')
 const readFileAsync = promisify(require('fs').readFile)
 
-// Given a `const` variable `TEMPLATE_DIR` which points to "<semantic-release-gitmoji>/lib/assets/templates"
-const TEMPLATE_DIR = 'lib/assets/templates'
+// Given a `const` variable `TEMPLATE_DIR` which points to "<semantic-release-gitmoji>/templates"
+const TEMPLATE_DIR = 'templates'
 
 // the *.hbs template and partials should be passed as strings of contents
 const template = readFileAsync(path.join(TEMPLATE_DIR, 'default-template.hbs'))
@@ -12,7 +12,7 @@ const commitTemplate = readFileAsync(path.join(TEMPLATE_DIR, 'commit-template.hb
 
 module.exports = {
   preset: 'angular',
-  repositoryUrl: 'https://github.com/Hwansul/orb.git',
+  repositoryUrl: 'https://github.com/jipilmuk/orb.git',
   branches: ["main"],
   plugins: [
     [
