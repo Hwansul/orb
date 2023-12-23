@@ -35,16 +35,16 @@ universal_binaries:
 brews:
   - # Name template of the recipe
     # Default to project name
-    name: orb
+    name: but
 
     # Your app's homepage.
     # Default is empty.
-    homepage: "https://github.com/jipilmuk/orb"
+    homepage: "https://github.com/hoehwa/but"
 
     # GitHub/GitLab repository to push the formula to
     repository:
       # Repository owner template. (templateable)
-      owner: jipilmuk
+      owner: hoehwa
       # Repository name. (templateable)
       name: homebrew-byeoru
 

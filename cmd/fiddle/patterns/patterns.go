@@ -6,7 +6,7 @@ package patterns
 import (
 	"fmt"
 
-	"github.com/jipilmuk/orb/cmd/fiddle"
+	"github.com/hoehwa/but/cmd/fiddle"
 	"github.com/spf13/cobra"
 )
 
@@ -22,19 +22,19 @@ This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println(`
-		Run 'orb fiddle pattern <subcommand>' for more information on a specific command.
+		Run 'but fiddle pattern <subcommand>' for more information on a specific command.
 		
 		you can use following subcommands:
-		- orb fiddle pattern animation
-		- orb fiddle pattern clipboard
-		- orb fiddle pattern components
-		- orb fiddle pattern exampleSet
-		- orb fiddle pattern files
-		- orb fiddle pattern layout
-		- orb fiddle pattern media
-		- orb fiddle pattern theming
-		- orb fiddle pattern webApps
-		- orb fiddle pattern webVitalPtrns
+		- but fiddle pattern animation
+		- but fiddle pattern clipboard
+		- but fiddle pattern components
+		- but fiddle pattern exampleSet
+		- but fiddle pattern files
+		- but fiddle pattern layout
+		- but fiddle pattern media
+		- but fiddle pattern theming
+		- but fiddle pattern webApps
+		- but fiddle pattern webVitalPtrns
 		`)
 	},
 }

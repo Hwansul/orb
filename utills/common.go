@@ -4,8 +4,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/jipilmuk/orb/constants"
-	"github.com/jipilmuk/orb/utills/bubbletea/listfancy"
+	"github.com/hoehwa/but/constants"
+	"github.com/hoehwa/but/utills/bubbletea/listfancy"
 	"github.com/pkg/browser"
 )
 

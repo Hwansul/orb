@@ -4,7 +4,7 @@ Copyright © 2023 NAME HERE <EMAIL ADDRESS>
 package fiddle
 
 import (
-	"github.com/jipilmuk/orb/utills"
+	"github.com/hoehwa/but/utills"
 	"github.com/spf13/cobra"
 )
 

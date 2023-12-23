@@ -6,7 +6,7 @@ package component
 import (
 	"fmt"
 
-	"github.com/jipilmuk/orb/cmd"
+	"github.com/hoehwa/but/cmd"
 	"github.com/spf13/cobra"
 )
 

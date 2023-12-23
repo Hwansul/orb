@@ -3,8 +3,8 @@ package utills
 import (
 	"strings"
 
-	"github.com/jipilmuk/orb/constants"
-	"github.com/jipilmuk/orb/utills/bubbletea/listfancy"
+	"github.com/hoehwa/but/constants"
+	"github.com/hoehwa/but/utills/bubbletea/listfancy"
 )
 
 // Print content of selected item with highlighted text.

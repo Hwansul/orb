@@ -22,11 +22,11 @@ THE SOFTWARE.
 package main
 
 import (
-	"github.com/jipilmuk/orb/cmd"
-	_ "github.com/jipilmuk/orb/cmd/component"
-	_ "github.com/jipilmuk/orb/cmd/component/react"
-	_ "github.com/jipilmuk/orb/cmd/fiddle"
-	_ "github.com/jipilmuk/orb/cmd/fiddle/patterns"
+	"github.com/hoehwa/but/cmd"
+	_ "github.com/hoehwa/but/cmd/component"
+	_ "github.com/hoehwa/but/cmd/component/react"
+	_ "github.com/hoehwa/but/cmd/fiddle"
+	_ "github.com/hoehwa/but/cmd/fiddle/patterns"
 )
 
 func main() {

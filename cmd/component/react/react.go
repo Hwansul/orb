@@ -6,7 +6,7 @@ package react
 import (
 	"fmt"
 
-	"github.com/jipilmuk/orb/cmd/component"
+	"github.com/hoehwa/but/cmd/component"
 	"github.com/spf13/cobra"
 )
 
@@ -22,15 +22,15 @@ This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println(`
-		Run 'orb component react <subcommand>' for more information on a specific command.
+		Run 'but component react <subcommand>' for more information on a specific command.
 		
 		you can use following subcommands:
-		- orb component react display
-		- orb component react feedback
-		- orb component react hooks
-		- orb component react input
-		- orb component react staful
-		- orb component react visuals
+		- but component react display
+		- but component react feedback
+		- but component react hooks
+		- but component react input
+		- but component react staful
+		- but component react visuals
 		`)
 	},
 }

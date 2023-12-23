@@ -1,4 +1,4 @@
-// Orb root A mysterious programming orb🔮
+// but root A mysterious programming but🔮
 // Copyright © 2023 Mindulle <mindullestudio@gmail.com>
 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,13 +26,13 @@ import (
 	"os"
 
 	"github.com/go-git/go-git/v5"
-	"github.com/jipilmuk/orb/constants"
+	"github.com/hoehwa/but/constants"
 	"github.com/spf13/cobra"
 )
 
 // RootCmd represents the base command when called without any subcommands.
 var RootCmd = &cobra.Command{
-	Use:   "orb",
+	Use:   "but",
 	Short: "A brief description of your application",
 	Long: `A longer description that spans multiple lines and likely contains
 examples and usage of using your application. For example:
@@ -74,7 +74,7 @@ func init() {
 	// Cobra supports persistent flags, which, if defined here,
 	// will be global for your application.
 
-	// RootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.orb.yaml)")
+	// RootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.but.yaml)")
 
 	// Cobra also supports local flags, which will only run
 	// when this action is called directly.

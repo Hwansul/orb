@@ -1,4 +1,4 @@
-module github.com/jipilmuk/orb
+module github.com/hoehwa/but
 
 go 1.20
 

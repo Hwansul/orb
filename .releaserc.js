@@ -12,7 +12,7 @@ const commitTemplate = readFileAsync(path.join(TEMPLATE_DIR, 'commit-template.hb
 
 module.exports = {
   preset: 'angular',
-  repositoryUrl: 'https://github.com/jipilmuk/orb.git',
+  repositoryUrl: 'https://github.com/hoehwa/but.git',
   branches: ["main"],
   plugins: [
     [

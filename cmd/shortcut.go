@@ -1,4 +1,4 @@
-// Orb shortcut show tables for vscode and obsidian
+// but shortcut show tables for vscode and obsidian
 // Copyright © 2023 Mindulle <mindullestudio@gmail.com>
 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -24,7 +24,7 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/jipilmuk/orb/utills/table"
+	"github.com/hoehwa/but/utills/table"
 
 	"github.com/spf13/cobra"
 )
