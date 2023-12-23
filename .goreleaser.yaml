@@ -46,7 +46,7 @@ brews:
       # Repository owner template. (templateable)
       owner: hoehwa
       # Repository name. (templateable)
-      name: homebrew-byeoru
+      name: homebrew-mungu
 
     # Git author used to commit to the repository.
     # Defaults are shown.
