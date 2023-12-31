@@ -1,5 +1,5 @@
 /*
-Copyright © 2023 NAME HERE <EMAIL ADDRESS>
+Copyright © 2024 NAME HERE <EMAIL ADDRESS>
 */
 package patterns
 
@@ -10,9 +10,9 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// patternCmd represents the pattern command.
-var patternCmd = &cobra.Command{
-	Use:   "pattern",
+// patternsCmd represents the patterns command
+var patternsCmd = &cobra.Command{
+	Use:   "patterns",
 	Short: "A brief description of your command",
 	Long: `A longer description that spans multiple lines and likely contains examples
 and usage of using your command. For example:
@@ -25,30 +25,30 @@ to quickly create a Cobra application.`,
 		Run 'but fiddle pattern <subcommand>' for more information on a specific command.
 		
 		you can use following subcommands:
-		- but fiddle pattern animation
-		- but fiddle pattern clipboard
-		- but fiddle pattern components
-		- but fiddle pattern exampleSet
-		- but fiddle pattern files
-		- but fiddle pattern layout
-		- but fiddle pattern media
-		- but fiddle pattern theming
-		- but fiddle pattern webApps
-		- but fiddle pattern webVitalPtrns
+		- but fiddle patterns animation
+		- but fiddle patterns clipboard
+		- but fiddle patterns components
+		- but fiddle patterns exampleSet
+		- but fiddle patterns files
+		- but fiddle patterns layout
+		- but fiddle patterns media
+		- but fiddle patterns theming
+		- but fiddle patterns webApps
+		- but fiddle patterns webVitalPtrns
 		`)
 	},
 }
 
 func init() {
-	fiddle.FiddleCmd.AddCommand(patternCmd)
+	fiddle.FiddleCmd.AddCommand(patternsCmd)
 
 	// Here you will define your flags and configuration settings.
 
 	// Cobra supports Persistent Flags which will work for this command
 	// and all subcommands, e.g.:
-	// patternCmd.PersistentFlags().String("foo", "", "A help for foo")
+	// patternsCmd.PersistentFlags().String("foo", "", "A help for foo")
 
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
-	// patternCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	// patternsCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }

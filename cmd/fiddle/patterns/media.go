@@ -24,7 +24,7 @@ to quickly create a Cobra application.`,
 }
 
 func init() {
-	patternCmd.AddCommand(mediaCmd)
+	patternsCmd.AddCommand(mediaCmd)
 
 	// Here you will define your flags and configuration settings.
 

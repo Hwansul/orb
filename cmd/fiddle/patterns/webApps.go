@@ -24,7 +24,7 @@ to quickly create a Cobra application.`,
 }
 
 func init() {
-	patternCmd.AddCommand(webAppsCmd)
+	patternsCmd.AddCommand(webAppsCmd)
 
 	// Here you will define your flags and configuration settings.
 
