@@ -29,7 +29,7 @@ to quickly create a Cobra application.`,
 		- but component react feedback
 		- but component react hooks
 		- but component react input
-		- but component react staful
+		- but component react stateful
 		- but component react visuals
 		`)
 	},
