@@ -22,17 +22,11 @@
 package cmd
 
 import (
-	"fmt"
+	"log"
 
-	"github.com/hoehwa/but/utills/table"
-
+	"github.com/hoehwa/but/internal"
 	"github.com/spf13/cobra"
 )
-
-var dataArr = [][][]string{
-	table.VscodeBody,
-	table.ObsidianBody,
-}
 
 // shortcutCmd represents the shortcut command.
 var shortcutCmd = &cobra.Command{
@@ -46,13 +40,19 @@ This command has flags for text editors(or IDE) which you prefer.
 	Run: func(cmd *cobra.Command, args []string) {
 
 		if vscodeOption, _ := cmd.Flags().GetBool("vscode"); vscodeOption {
-			table.Print(dataArr[0], table.Header, table.Footer)
-		}
-		if obsidianOption, _ := cmd.Flags().GetBool("obsidian"); obsidianOption {
-			table.Print(dataArr[1], table.Header, table.Footer)
+			internal.RenderTable(internal.Columns, internal.TableBodyForVscode)
+			return
 		}
 
-		fmt.Println("You can see a shortcut tables for obsidian or vscode. please run this command again with --vscode or --obsidian")
+		if obsidianOption, _ := cmd.Flags().GetBool("obsidian"); obsidianOption {
+			internal.RenderTable(internal.Columns, internal.TableBodyForObsidian)
+			return
+		}
+
+		err := cmd.Help()
+		if err != nil {
+			log.Fatal(err)
+		}
 	},
 }
 

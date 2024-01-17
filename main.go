@@ -26,7 +26,12 @@ import (
 	_ "github.com/hoehwa/but/cmd/component"
 	_ "github.com/hoehwa/but/cmd/component/react"
 	_ "github.com/hoehwa/but/cmd/fiddle"
-	_ "github.com/hoehwa/but/cmd/fiddle/patterns"
+	_ "github.com/hoehwa/but/cmd/fiddle/logic"
+	_ "github.com/hoehwa/but/cmd/fiddle/logic/DOM"
+	_ "github.com/hoehwa/but/cmd/fiddle/prsnt"
+	_ "github.com/hoehwa/but/cmd/fiddle/stateful"
+	_ "github.com/hoehwa/but/cmd/patterns"
+	_ "github.com/hoehwa/but/cmd/patterns/webVitalsPtrns"
 )
 
 func main() {

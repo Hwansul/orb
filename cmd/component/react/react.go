@@ -4,7 +4,7 @@ Copyright © 2023 NAME HERE <EMAIL ADDRESS>
 package react
 
 import (
-	"fmt"
+	"log"
 
 	"github.com/hoehwa/but/cmd/component"
 	"github.com/spf13/cobra"
@@ -21,17 +21,10 @@ Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println(`
-		Run 'but component react <subcommand>' for more information on a specific command.
-		
-		you can use following subcommands:
-		- but component react display
-		- but component react feedback
-		- but component react hooks
-		- but component react input
-		- but component react stateful
-		- but component react visuals
-		`)
+		err := cmd.Help()
+		if err != nil {
+			log.Fatal(err)
+		}
 	},
 }
 

@@ -4,7 +4,7 @@ Copyright © 2023 NAME HERE <EMAIL ADDRESS>
 package react
 
 import (
-	"github.com/hoehwa/but/utills"
+	"github.com/hoehwa/but/internal"
 	"github.com/spf13/cobra"
 )
 
@@ -19,7 +19,7 @@ Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		utills.InitComponents("/component/react/feedback/")
+		internal.InitComponents("/component/react/feedback/")
 	},
 }
 

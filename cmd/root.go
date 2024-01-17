@@ -22,18 +22,19 @@
 package cmd
 
 import (
-	"fmt"
+	"log"
 	"os"
 
-	"github.com/go-git/go-git/v5"
-	"github.com/hoehwa/but/constants"
+	"github.com/hoehwa/but/internal"
+	"github.com/hoehwa/gopkg/git"
 	"github.com/spf13/cobra"
 )
 
 // RootCmd represents the base command when called without any subcommands.
 var RootCmd = &cobra.Command{
-	Use:   "but",
-	Short: "A brief description of your application",
+	Use:     "but",
+	Version: "v0.2.3",
+	Short:   "A brief description of your application",
 	Long: `A longer description that spans multiple lines and likely contains
 examples and usage of using your application. For example:
 
@@ -43,20 +44,15 @@ to quickly create a Cobra application.`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	Run: func(cmd *cobra.Command, args []string) {
-		if _, err := os.ReadDir(constants.BaseDir); err != nil {
-			// Clone the given repository to the given directory
-			targetURL := fmt.Sprintf("https://github.com/%s/%s", constants.Owner, constants.Repository)
-
-			info(fmt.Sprintf("git clone %s", targetURL))
-
-			_, err := git.PlainClone(constants.BaseDir, false, &git.CloneOptions{
-				URL:      targetURL,
-				Progress: os.Stdout,
-			})
-			checkIfError(err)
+		if _, err := os.ReadDir(internal.BaseDir); err != nil {
+			git.CloneRepoInto(internal.Owner, internal.Repository, internal.BaseDir)
+			return
 		}
 
-		fmt.Println("To see how this commands colud be used, run this command again with --help option.")
+		err := cmd.Help()
+		if err != nil {
+			log.Fatal(err)
+		}
 	},
 }
 
@@ -79,18 +75,4 @@ func init() {
 	// Cobra also supports local flags, which will only run
 	// when this action is called directly.
 	RootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
-}
-
-func checkIfError(err error) {
-	if err == nil {
-		return
-	}
-
-	fmt.Printf("\x1b[31;1m%s\x1b[0m\n", fmt.Sprintf("error: %s", err))
-	os.Exit(1)
-}
-
-// info should be used to describe the example commands that are about to run.
-func info(format string, args ...interface{}) {
-	fmt.Printf("\x1b[34;1m%s\x1b[0m\n", fmt.Sprintf(format, args...))
 }
