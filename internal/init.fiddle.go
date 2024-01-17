@@ -10,8 +10,8 @@ func getFiddleAddress(destPath string) string {
 	return compunded
 }
 
-func getDescsForFiddle() []string {
-	files, err := os.ReadDir(BaseDir)
+func getDescsForFiddle(destPath string) []string {
+	files, err := os.ReadDir(BaseDir + destPath)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -19,7 +19,7 @@ func getDescsForFiddle() []string {
 	descs := make([]string, 0, len(files))
 
 	for _, file := range files {
-		descs = append(descs, getFiddleAddress(file.Name()))
+		descs = append(descs, getFiddleAddress(destPath+file.Name()))
 	}
 
 	return descs
@@ -28,7 +28,7 @@ func getDescsForFiddle() []string {
 // Show a list of fiddles written in pure HTML/CSS/JS and open an user selection with default browser.
 func InitFiddle(destPath string) {
 	titles := getTitles(destPath)
-	descs := getDescsForFiddle()
+	descs := getDescsForFiddle(destPath)
 
 	selectedFiddle := showExterinsics(titles, descs)
 

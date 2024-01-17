@@ -6,12 +6,12 @@ import (
 )
 
 func getPatternAddress(destPath string) string {
-	compunded := WebdevBaseurl + destPath
-	return compunded
+	address := WebdevBaseurl + destPath
+	return address
 }
 
-func getDescsForPattern() []string {
-	files, err := os.ReadDir(BaseDir)
+func getDescsForPattern(destPath string) []string {
+	files, err := os.ReadDir(BaseDir + destPath)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -19,7 +19,7 @@ func getDescsForPattern() []string {
 	descs := make([]string, 0, len(files))
 
 	for _, file := range files {
-		descs = append(descs, getPatternAddress(file.Name()))
+		descs = append(descs, getPatternAddress(destPath+file.Name()))
 	}
 
 	return descs
@@ -29,7 +29,7 @@ func getDescsForPattern() []string {
 // And open an user selection with default browser.
 func InitPatterns(destPath string) {
 	titles := getTitles(destPath)
-	descs := getDescsForPattern()
+	descs := getDescsForPattern(destPath)
 
 	selectedPattern := showExterinsics(titles, descs)
 

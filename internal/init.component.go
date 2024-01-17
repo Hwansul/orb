@@ -10,8 +10,8 @@ func getCompAddress(destPath string) string {
 	return compunded
 }
 
-func getDescsForComp() []string {
-	files, err := os.ReadDir(BaseDir)
+func getDescsForComp(destPath string) []string {
+	files, err := os.ReadDir(BaseDir + destPath)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -19,7 +19,7 @@ func getDescsForComp() []string {
 	descs := make([]string, 0, len(files))
 
 	for _, file := range files {
-		descs = append(descs, getCompAddress(file.Name()))
+		descs = append(descs, getCompAddress(destPath+file.Name()))
 	}
 
 	return descs
@@ -28,7 +28,7 @@ func getDescsForComp() []string {
 // Show a list of components and open an user selection with default browser.
 func InitComponents(destPath string) {
 	titles := getTitles(destPath)
-	descs := getDescsForComp()
+	descs := getDescsForComp(destPath)
 
 	selectedComponent := showExterinsics(titles, descs)
 

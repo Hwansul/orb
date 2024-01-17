@@ -24,7 +24,7 @@ func fmtFileNameToURL(subPath string, fname string) string {
 }
 
 func getTitles(subPath string) []string {
-	files, err := os.ReadDir(BaseDir)
+	files, err := os.ReadDir(BaseDir + subPath)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -48,5 +48,5 @@ func showExterinsics(titles []string, descriptions []string) string {
 
 	listfancy.InitCallout(*callout)
 
-	return selection.Description()
+	return callout.Selection.Description()
 }
