@@ -39,6 +39,21 @@ This command has flags for text editors(or IDE) which you prefer.
 
 	Run: func(cmd *cobra.Command, args []string) {
 
+		if vimOption, _ := cmd.Flags().GetBool("vim"); vimOption {
+			internal.RenderTable(internal.Columns, internal.TableBodyForVim)
+			return
+		}
+
+		if vimCmdOption, _ := cmd.Flags().GetBool("vimcmd"); vimCmdOption {
+			internal.RenderTable(internal.Columns, internal.TableBodyForVim)
+			return
+		}
+
+		if surfingkeys, _ := cmd.Flags().GetBool("surfingkeys"); surfingkeys {
+			internal.RenderTable(internal.Columns, internal.TableBodyForSurfingKeys)
+			return
+		}
+
 		if vscodeOption, _ := cmd.Flags().GetBool("vscode"); vscodeOption {
 			internal.RenderTable(internal.Columns, internal.TableBodyForVscode)
 			return
@@ -67,6 +82,9 @@ func init() {
 
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
+	shortcutCmd.Flags().BoolP("vim", "", false, "Show shortcuts for vim")
+	shortcutCmd.Flags().BoolP("vimcmd", "", false, "Show shortcuts for vim")
+	shortcutCmd.Flags().BoolP("surfingkeys", "", false, "Show shortcuts for surfingkeys")
 	shortcutCmd.Flags().BoolP("vscode", "", false, "Show shortcuts for vscode")
 	shortcutCmd.Flags().BoolP("obsidian", "", false, "Show my custom shortcuts for obsidian")
 }
