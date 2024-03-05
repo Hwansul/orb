@@ -87,6 +87,8 @@ var TableBodyForSurfingKeys = table.Rows{
 
 // Hardcoded table body data for vscode.
 var TableBodyForVscode = table.Rows{
+	{"Toggle Line Comment", "In javascript, add dobule slash(//) in source code.", "Ctrl+/"},
+	{"Toggle Block Comment", "In javascript, wrap with slack and asterisk to block.", "Shift+Alt+A"},
 	{"Quick Fix", "Extract source codes into a new method or function.", "Ctrl+."},
 	{"Refactor", "see refactorings without Quick Fixes.", "Ctrl+Shift+R"},
 	{"Extract/Inline variable", "Being able to take magic values and give them a name lets you simplify your code quickly.", "Ctrl+."},
