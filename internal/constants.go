@@ -1,10 +1,14 @@
 package internal
 
-import "os"
+import (
+	"os"
+
+	"github.com/adrg/xdg"
+)
 
 // Base directory of snippet.
 var userHomeDir, _ = os.UserHomeDir()
-var BaseDir = userHomeDir + "/but"
+var BaseDir = xdg.ConfigHome + "/but"
 
 // github username and repo in order to fetch snippets.
 var Owner = "hoehwa"
