@@ -79,6 +79,8 @@ var TableBodyForSurfingKeys = table.Rows{
 	{"Copy current  URL", "Copy current page's URL", "yy"},
 	{"Copy elements", "Yank text of an element", "yv"},
 	{"Copy element URL", "Copy a link URL to the clipboard", "ya"},
+	{"Copy Host", "Copy current page's host", "yh"},
+	{"Copy Title", "Copy current page's title", "yl"},
 	{"Go to last tab", "Go to last used tab", "Ctrl + 6"},
 	{"Last tab", "Go to last used tab", "Ctrl + 6"},
 	{"Last tab", "Go to edit box", "i"},
